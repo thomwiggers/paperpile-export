@@ -1,0 +1,314 @@
+@INPROCEEDINGS{Schwabe2021-sx,
+  title     = "More Efficient Post-quantum {KEMTLS} with Pre-distributed Public
+               Keys",
+  booktitle = "Computer Security -- {ESORICS} 2021",
+  author    = "Schwabe, Peter and Stebila, Douglas and Wiggers, Thom",
+  abstract  = "While server-only authentication with certificates is the most
+               widely used mode of operation for the Transport Layer Security
+               (TLS) protocol on the world wide web, there are many
+               applications where TLS is used in a different way or with
+               different constraints. For example, embedded Internet-of-Things
+               clients may have a server certificate pre-programmed and be
+               highly constrained in terms of communication bandwidth or
+               computation power. As post-quantum algorithms have a wider range
+               of performance trade-offs, designs other than traditional
+               ``signed-key-exchange'' may be worthwhile. The KEMTLS protocol,
+               presented at ACM CCS 2020, uses key encapsulation mechanisms
+               (KEMs) rather than signatures for authentication in the TLS 1.3
+               handshake, a benefit since most post-quantum KEMs are more
+               efficient than PQ signatures. However, KEMTLS has some
+               drawbacks, especially in the client authentication scenario
+               which requires a full additional roundtrip.",
+  publisher = "Springer International Publishing",
+  pages     = "3--22",
+  year      =  2021
+}
+
+@INPROCEEDINGS{Gonzalez2021-hc,
+  title     = "Verifying {Post-Quantum} Signatures in 8 kB of {RAM}",
+  booktitle = "{Post-Quantum} Cryptography",
+  author    = "Gonzalez, Ruben and H{\"u}lsing, Andreas and Kannwischer,
+               Matthias J and Kr{\"a}mer, Juliane and Lange, Tanja and
+               St{\"o}ttinger, Marc and Waitz, Elisabeth and Wiggers, Thom and
+               Yang, Bo-Yin",
+  abstract  = "In this paper, we study implementations of post-quantum
+               signature schemes on resource-constrained devices. We focus on
+               verification of signatures and cover NIST PQC round-3 candidates
+               Dilithium, Falcon, Rainbow, GeMSS, and SPHINCS$$^+$$+. We assume
+               an ARM Cortex-M3 with 8 kB of memory and 8 kB of flash for code;
+               a practical and widely deployed setup in, for example, the
+               automotive sector. This amount of memory is insufficient for
+               most schemes. Rainbow and GeMSS public keys are too big;
+               SPHINCS$$^+$$+signatures do not fit in this memory. To make
+               signature verification work for these schemes, we stream in
+               public keys and signatures. Due to the memory requirements for
+               efficient Dilithium implementations, we stream in the public key
+               to cache more intermediate results. We discuss the suitability
+               of the signature schemes for streaming, adapt existing
+               implementations, and compare performance.",
+  publisher = "Springer International Publishing",
+  pages     = "215--233",
+  year      =  2021
+}
+
+@INPROCEEDINGS{Schwabe2020-zb,
+  title     = "{Post-Quantum} {TLS} Without Handshake Signatures",
+  booktitle = "Proceedings of the 2020 {ACM} {SIGSAC} Conference on Computer
+               and Communications Security",
+  author    = "Schwabe, Peter and Stebila, Douglas and Wiggers, Thom",
+  abstract  = "We present KEMTLS, an alternative to the TLS 1.3 handshake that
+               uses key-encapsulation mechanisms (KEMs) instead of signatures
+               for server authentication. Among existing post-quantum
+               candidates, signature schemes generally have larger public
+               key/signature sizes compared to the public key/ciphertext sizes
+               of KEMs: by using an IND-CCA-secure KEM for server
+               authentication in post-quantum TLS, we obtain multiple benefits.
+               A size-optimized post-quantum instantiation of KEMTLS requires
+               less than half the bandwidth of a size-optimized post-quantum
+               instantiation of TLS 1.3. In a speed-optimized instantiation,
+               KEMTLS reduces the amount of server CPU cycles by almost 90\%
+               compared to TLS 1.3, while at the same time reducing
+               communication size, reducing the time until the client can start
+               sending encrypted application data, and eliminating code for
+               signatures from the server's trusted code base.",
+  publisher = "Association for Computing Machinery",
+  pages     = "1461--1480",
+  series    = "CCS '20",
+  month     =  nov,
+  year      =  2020,
+  address   = "New York, NY, USA",
+  keywords  = "transport layer security, post-quantum cryptography,
+               key-encapsulation mechanism, NIST PQC",
+  location  = "Virtual Event, USA"
+}
+
+@ARTICLE{Campos2023-tp,
+  title    = "On the practicality of post-quantum {TLS} using large-parameter
+              {CSIDH}",
+  author   = "Campos, F and Ch{\'a}vez-Saab, J and Chi-Dom{\'\i}nguez,
+              Jes{\'u}s-Javier and Meyer, Michael and Reijnders, Krijn and
+              Rodr{\'\i}guez-Henr{\'\i}quez, F and Schwabe, P and Wiggers, Thom",
+  abstract = ",",
+  journal  = "IACR Cryptol eprint Arch",
+  volume   =  2023,
+  pages    = "793",
+  year     =  2023
+}
+
+@INPROCEEDINGS{Wiggers2021-nv,
+  title     = "Practically Solving {LPN}",
+  booktitle = "2021 {IEEE} International Symposium on Information Theory
+               ({ISIT})",
+  author    = "Wiggers, Thom and Samardjiska, Simona",
+  abstract  = "The best algorithms for the Learning Parity with Noise (LPN)
+               problem require sub-exponential time and memory. This often
+               makes memory, and not time, the limiting factor for practical
+               attacks, which seem to be out of reach even for relatively small
+               parameters. In this paper, we try to bring the state-of-the-art
+               in solving LPN closer to the practical realm. We improve upon
+               the existing algorithms by modifying the Coded-BKW algorithm to
+               work under various memory constrains. We correct and expand
+               previous analysis and experimentally verify our findings. As a
+               result we were able to mount practical attacks on the largest
+               parameters reported to date using only 2 39 bits of memory.",
+  publisher = "IEEE",
+  pages     = "2399--2404",
+  month     =  jul,
+  year      =  2021
+}
+
+% The entry below contains non-ASCII chars that could not be converted
+% to a LaTeX equivalent.
+@INPROCEEDINGS{Gonzalez2022-cj,
+  title     = "{KEMTLS} vs. Post-quantum {TLS}: Performance on Embedded Systems",
+  author    = "Gonzalez, R and Wiggers, T",
+  abstract  = "TLS is ubiquitous in modern computer networks. It secures
+               transport for high-end desktops and low-end embedded devices
+               alike. However, the public key cryptosystems currently used …",
+  publisher = "Springer",
+  year      =  2022
+}
+
+@INPROCEEDINGS{Celi2022-cp,
+  title     = "A Tale of Two Models: Formal Verification of {KEMTLS} via
+               Tamarin",
+  booktitle = "Computer Security -- {ESORICS} 2022",
+  author    = "Celi, Sof{\'\i}a and Hoyland, Jonathan and Stebila, Douglas and
+               Wiggers, Thom",
+  abstract  = "KEMTLS is a proposal for changing the TLS handshake to
+               authenticate the handshake using long-term key encapsulation
+               mechanism keys instead of signatures, motivated by trade-offs in
+               the characteristics of post-quantum algorithms. Prior proofs of
+               security of KEMTLS and its variant KEMTLS-PDK have been
+               hand-written proofs in the reductionist model under
+               computational assumptions. In this paper, we present
+               computer-verified symbolic analyses of KEMTLS and KEMTLS-PDK
+               using two distinct Tamarin models. In the first analysis, we
+               adapt the detailed Tamarin model of TLS 1.3 by Cremers et al.
+               (ACM CCS 2017), which closely follows the wire-format of the
+               protocol specification, to KEMTLS(-PDK). We show that
+               KEMTLS(-PDK) has equivalent security properties to the main
+               handshake of TLS 1.3 proven in this model. We were able to fully
+               automate this Tamarin proof, compared with the previous TLS 1.3
+               Tamarin model, which required a big manual proving effort; we
+               also uncovered some inconsistencies in the previous model. In
+               the second analysis, we present a novel Tamarin model of
+               KEMTLS(-PDK), which closely follows the multi-stage key exchange
+               security model from prior pen-and-paper proofs of KEMTLS(-PDK).
+               The second approach is further away from the wire-format of the
+               protocol specification but captures more subtleties in security
+               definitions, like deniability and different levels of forward
+               secrecy; it also identifies some flaws in the security claims
+               from the pen-and-paper proofs. Our positive security results
+               increase the confidence in the design of KEMTLS(-PDK). Moreover,
+               viewing these models side-by-side allows us to comment on the
+               trade-off in symbolic analysis between detail in protocol
+               specification and granularity of security properties.",
+  publisher = "Springer Nature Switzerland",
+  pages     = "63--83",
+  year      =  2022
+}
+
+@ARTICLE{Scholten2024-mf,
+  title         = "Assessing the Benefits and Risks of Quantum Computers",
+  author        = "Scholten, Travis L and Williams, Carl J and Moody, Dustin
+                   and Mosca, Michele and Hurley, William and Zeng, William J
+                   and Troyer, Matthias and Gambetta, Jay M",
+  abstract      = "Quantum computing is an emerging technology with potentially
+                   far-reaching implications for national prosperity and
+                   security. Understanding the timeframes over which economic
+                   benefits and national security risks may manifest themselves
+                   is vital for ensuring the prudent development of this
+                   technology. To inform security experts and policy decision
+                   makers on this matter, we review what is currently known on
+                   the potential uses and risks of quantum computers,
+                   leveraging current research literature. The maturity of
+                   currently-available quantum computers is not yet at a level
+                   such that they can be used in production for large-scale,
+                   industrially-relevant problems, but they are not believed to
+                   currently pose security risks. We identify 2 large-scale
+                   trends -- new approximate methods (variational algorithms,
+                   error mitigation, and circuit knitting) and the commercial
+                   exploration of business-relevant quantum applications --
+                   which, together, may enable useful and practical quantum
+                   computing in the near future. Crucially, these methods do
+                   not appear likely to change the required resources for
+                   cryptanalysis on currently-used cryptosystems. From an
+                   analysis we perform of the current and known algorithms for
+                   cryptanalysis, we find they require circuits of a size
+                   exceeding those that can be run by current and near-future
+                   quantum computers (and which will require error correction),
+                   though we acknowledge improvements in quantum algorithms for
+                   these problems are taking place in the literature. In
+                   addition, the risk to cybersecurity can be well-managed by
+                   the migration to new, quantum-safe cryptographic protocols,
+                   which we survey and discuss. Given the above, we conclude
+                   there is a credible expectation that quantum computers will
+                   be capable of performing computations which are
+                   economically-impactful before they will be capable of
+                   performing ones which are cryptographically-relevant.",
+  month         =  jan,
+  year          =  2024,
+  archivePrefix = "arXiv",
+  primaryClass  = "quant-ph",
+  eprint        = "2401.16317"
+}
+
+@INPROCEEDINGS{Celi2021-sp,
+  title     = "Implementing and Measuring {KEMTLS}",
+  booktitle = "Progress in Cryptology -- {LATINCRYPT} 2021",
+  author    = "Celi, Sof{\'\i}a and Faz-Hern{\'a}ndez, Armando and Sullivan,
+               Nick and Tamvada, Goutam and Valenta, Luke and Wiggers, Thom and
+               Westerbaan, Bas and Wood, Christopher A",
+  abstract  = "KEMTLS is a novel alternative to the Transport Layer Security
+               (TLS) handshake that integrates post-quantum algorithms. It uses
+               key encapsulation mechanisms (KEMs) for both confidentiality and
+               authentication, achieving post-quantum security while obviating
+               the need for expensive post-quantum signatures. The original
+               KEMTLS paper presents a security analysis, Rust implementation,
+               and benchmarks over emulated networks. In this work, we provide
+               full Go implementations of KEMTLS and other post-quantum
+               handshake alternatives, describe their integration into a
+               distributed system, and provide performance evaluations over
+               real network conditions. We compare the standard
+               (non-quantum-resistant) TLS 1.3 handshake with three
+               alternatives: one that uses post-quantum signatures in
+               combination with post-quantum KEMs (PQTLS), one that uses
+               KEMTLS, and one that is a reduced round trip version of KEMTLS
+               (KEMTLS-PDK). In addition to the performance evaluations, we
+               discuss how the design of these protocols impacts TLS from an
+               implementation and configuration perspective.",
+  publisher = "Springer International Publishing",
+  pages     = "88--107",
+  year      =  2021
+}
+
+@INPROCEEDINGS{Kannwischer2022-wy,
+  title      = "Improving Software Quality in Cryptography Standardization
+                Projects",
+  booktitle  = "2022 {IEEE} European Symposium on Security and Privacy
+                Workshops ({EuroS\&PW})",
+  author     = "Kannwischer, Matthias J and Schwabe, Peter and Stebila, Douglas
+                and Wiggers, Thom",
+  abstract   = "The NIST post-quantum cryptography (PQC) standardization
+                project is probably the largest and most ambitious cryptography
+                standardization effort to date, and as such it makes an
+                excellent case study of cryptography standardization projects.
+                It is expected that with the end of round 3 in early 2022, NIST
+                will announce the first set of primitives to advance to
+                standardization, so it seems like a good time to look back and
+                see what lessons can be learned from this effort. In this
+                paper, we take a look at one specific aspect of the NIST PQC
+                project: software implementations. We observe that many
+                implementations included as a mandatory part of the submission
+                packages were of poor quality and ignored decades-old standard
+                techniques from software engineering to guarantee a certain
+                baseline quality level. As a consequence, it was not possible
+                to readily use those implementations in experiments for
+                post-quantum protocol migration and software optimization
+                efforts without first spending a significant amount of time to
+                clean up the submitted reference implementations. We do not
+                mean to criticize cryptographers who submitted proposals,
+                including software implementations, to NIST PQC: after all, it
+                cannot reasonably be expected from every cryptographer to also
+                have expertise in software engineering. Instead, we suggest how
+                standardization bodies like NIST can improve the
+                software-submission process in future efforts to avoid such
+                issues with submitted software. More specifically, we present
+                PQClean, an extensive (continuous-integration) testing
+                framework for PQC software, which now also contains ``clean''
+                implementations of the NIST round 3 candidate schemes. We argue
+                that the availability of such a framework-either in an online
+                continuous-integration setup, or just as an offline testing
+                system-long before the submission deadline would have resulted
+                in much better implementations included in NIST PQC submissions
+                and overall would have saved the community and probably also
+                NIST a lot of time and effort.",
+  publisher  = "IEEE",
+  pages      = "19--30",
+  month      =  jun,
+  year       =  2022,
+  conference = "SSR"
+}
+
+@INPROCEEDINGS{Gunther2022-mw,
+  title     = "{KEMTLS} with Delayed Forward Identity Protection in (Almost) a
+               Single Round Trip",
+  booktitle = "Applied Cryptography and Network Security",
+  author    = "G{\"u}nther, Felix and Rastikian, Simon and Towa, Patrick and
+               Wiggers, Thom",
+  abstract  = "The recent KEMTLS protocol (Schwabe, Stebila and Wiggers,
+               CCS'20) is a promising design for a quantum-safe TLS handshake
+               protocol. Focused on the web setting, wherein clients learn
+               server public-key certificates only during connection
+               establishment, a drawback of KEMTLS compared to TLS 1.3 is that
+               it introduces an additional round trip before the server can
+               send data, and an extra one for the client as well in the case
+               of mutual authentication. In many scenarios, including IoT and
+               embedded settings, client devices may however have the targeted
+               server certificate pre-loaded, so that such performance penalty
+               seems unnecessarily restrictive.",
+  publisher = "Springer International Publishing",
+  pages     = "253--272",
+  year      =  2022
+}
